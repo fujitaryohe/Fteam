@@ -1,4 +1,4 @@
-﻿using Camp_Web_Site.Models;
+﻿using CampApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
