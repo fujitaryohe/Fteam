@@ -1,4 +1,4 @@
-﻿using CampApp.Models;
+﻿using Camp_Web_Site.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace CampApp.Controllers
+namespace Camp_Web_Site.Controllers
 {
     public class HomeController : Controller
     {
@@ -23,10 +23,37 @@ namespace CampApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Rental()
         {
             return View();
         }
+
+        public IActionResult Subscription()
+        {
+            return View();
+        }
+
+        public IActionResult SubscCheck()
+        {
+            return View();
+        }
+
+
+        public IActionResult E_Commerce()
+        {
+            return View();
+        }
+
+        public IActionResult Inquiry()
+        {
+            return View();
+        }
+
+        public IActionResult LogIn()
+        {
+            return View();
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
