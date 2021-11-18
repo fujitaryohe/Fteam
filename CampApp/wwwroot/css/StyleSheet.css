@@ -1,0 +1,52 @@
+﻿#title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+nav {
+    margin-top: 100px;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    display: block;
+    font-size: 20px;
+    list-style-type: none;
+    border-left: solid 3px;
+    background-color: aqua;
+    margin-bottom: 30px;
+}
+
+    li a:hover {
+        background-color: red;
+    }
+
+
+th {
+    text-align: center;
+}
+
+#box {
+    width: 700px;
+    height: 300px;
+    border: solid 3px;
+    overflow-y: scroll;
+}
+
+#LogInBox {
+    width: 300px;
+    height: 200px;
+    border: solid 3px;
+}
+
+#LogIn {
+    font-size: 20px;
+    display: flex;
+    position: absolute;
+    top: 80px;
+    right: 135px;
+}
