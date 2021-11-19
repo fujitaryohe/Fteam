@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "Let's Camp!";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+</head>
+
+<body>
+    <header>
+        <h1 id="title">Let's Camp!</h1>
+        <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン" id="LogIn"></a>
+        <nav>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">ホームページ</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Rental">レンタル</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Subscription">会員登録</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="E_Commerce">電子商取引について</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Inquiry">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+
+        <p>問い合わせ画面</p>
+
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+</body>
