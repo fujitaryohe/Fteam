@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Camp_Web_Site.Controllers
+namespace CampApp.Controllers
 {
     public class HomeController : Controller
     {
