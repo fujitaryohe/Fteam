@@ -3,13 +3,15 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/Style.css" />
 </head>
 
 <body>
     <header>
         <h1 id="title">Let's Camp!</h1>
-        <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン" id="LogIn"></a>
+        <div id="LogIn">
+            <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン"></a>
+        </div>
         <nav>
             <ul>
                 <li>
@@ -30,9 +32,22 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
 
-        <p>レンタル画面</p>
+    <div class="rental">
+        <h5 class="midashi">テント</h5>
+        <div class="img">
+            <div>
+                <img src="~/image/テント1.jpg"><p class="item_name">テント1</p>
+            </div>
+            <div><img src="~/image/テント2.jpg"><p class="item_name">テント2</p></div>
+        </div>
+        <br />
+        <div class="img">
+            <div>
+                <img src="~/image/テント3.jpg"><p class="item_name">テント3</p>
+            </div>
+            <div><img src="~/image/テント4.jpg"><p class="item_name">テント4</p></div>
+        </div>
 
     </div>
 
