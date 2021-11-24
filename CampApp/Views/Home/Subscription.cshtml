@@ -37,13 +37,12 @@
     </header>
 
     <script type="text/javascript">
-        function check($num_char) {
-            var str = $num_char.value;
+        function checkForm($this) {
+            var str = $this.value;
             while (str.match(/[^A-Z^a-z\d\-]/)) {
                 str = str.replace(/[^A-Z^a-z\d\-]/, "");
             }
-            $num_char.value = str;
-        }
+            $this.value = str;
 
     </script>
 
@@ -61,7 +60,7 @@
                     <tr><th>フリガナ</th><td><input type="text" name="furigana" size="30" required></td></tr>
                     <tr><th>性別</th><td style="text-align:center"><label>男<input type="radio" name="gender" value="man">　</label><label>女<input type="radio" name="gender" value="woman"></label></td></tr>
                     <tr><th>生年月日</th><td><input type="date" name="birthday" required></td></tr>
-                    <tr><th>会員ID</th><td><input type="text" name="ID" size="30" oninput="check(num_char)" required></td></tr>
+                    <tr><th>会員ID</th><td><input type="text" name="ID" size="30" oninput="checkForm(this)" required></td></tr>
                     <tr><th>パスワード</th><td><input type="password" name="password" required></td></tr>
                     <tr><th>パスワード（再入力）</th><td><input type="password" name="rePassword" required></td></tr>
                     <tr><th>住所</th><td><input type="text" name="address" size="50" required></td></tr>
