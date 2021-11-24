@@ -33,13 +33,8 @@ namespace CampApp.Controllers
             return View();
         }
 
-        public IActionResult SubscCheck()
-        {
-            return View();
-        }
-
         [HttpPost]
-        public IActionResult SubscCheck(SubscriptionModel model)
+        public IActionResult Subscription(SubscriptionModel model)
         {
             if (model != null)
             {
@@ -60,6 +55,10 @@ namespace CampApp.Controllers
             return View(model);
         }
 
+        public IActionResult SubscCheck()
+        {
+            return View();
+        }
 
         public IActionResult E_Commerce()
         {
