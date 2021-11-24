@@ -6,6 +6,11 @@
 
 <head>
     <style>
+        div {
+            display: flex;
+            justify-content: center
+        }
+
         #div {
             position: absolute;
             top: 50%;
@@ -37,7 +42,7 @@
     <br>
 </div>
 
-<div style="display:flex;justify-content:center">
+<div>
     @using (Html.BeginForm())
     {
         <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
