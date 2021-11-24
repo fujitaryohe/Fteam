@@ -39,7 +39,7 @@ namespace CampApp.Controllers
         }
 
         [HttpPost]
-        public IActionResult SubscrCheck(SubscriptionModel model)
+        public IActionResult SubscCheck(SubscriptionModel model)
         {
             if (model != null)
             {
