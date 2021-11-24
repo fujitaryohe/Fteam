@@ -55,35 +55,10 @@ namespace CampApp.Controllers
             return View(model);
         }
 
-
-
         public IActionResult SubscCheck()
         {
             return View();
         }
-
-        [HttpPost]
-        public IActionResult SubscCheck(SubscriptionModel model)
-        {
-            if (model != null)
-            {
-                ViewBag.name = model.name;
-                ViewBag.furigana = model.furigana;
-                ViewBag.birthday = model.birthday;
-                ViewBag.ID = model.ID;
-                ViewBag.rePassword = model.rePassword;
-                ViewBag.address = model.address;
-                ViewBag.phonenum = model.phonenum;
-                ViewBag.mail = model.mail;
-
-            }
-            else
-            {
-                ViewBag.name = "No Name";
-            }
-            return View(model);
-        }
-
 
         public IActionResult E_Commerce()
         {
