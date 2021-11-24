@@ -13,7 +13,7 @@ namespace CampApp.Models
         public string ID { get; set; }
         public string rePassword { get; set; }
         public string address { get; set; }
-        public string phonnum { get; set; }
+        public string phonenum { get; set; }
         public string mail { get; set; }
     }
 }
