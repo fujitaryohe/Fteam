@@ -33,8 +33,13 @@ namespace CampApp.Controllers
             return View();
         }
 
+        public IActionResult SubscCheck()
+        {
+            return View();
+        }
+
         [HttpPost]
-        public IActionResult Subscription(SubscriptionModel model)
+        public IActionResult SubscCheck(SubscriptionModel model)
         {
             if (model != null)
             {
@@ -53,11 +58,6 @@ namespace CampApp.Controllers
                 ViewBag.name = "No Name";
             }
             return View(model);
-        }
-
-        public IActionResult SubscCheck()
-        {
-            return View();
         }
 
         public IActionResult E_Commerce()
