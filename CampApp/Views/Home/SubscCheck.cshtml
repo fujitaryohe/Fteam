@@ -5,7 +5,7 @@
 }
 
 <h3>確認画面</h3>
-<div style="display:flex;justify-content:center">
+<div style="position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%);">
     <table border="1">
         <tr><th>名前</th><td>@ViewBag.name</td></tr>
         <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
@@ -20,7 +20,7 @@
     <br>
     @using (Html.BeginForm())
     {
-        <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
+        <p>「登録する」ボタンを押してください。</p>
         <div style="display:flex;justify-content:center"><input type="submit" name="send" value="登録する"></div>
     }
 
