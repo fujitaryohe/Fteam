@@ -8,7 +8,8 @@
     <style>
         div {
             display: flex;
-            justify-content: center
+            justify-content: center;
+            flex-direction: column;
         }
 
         #div {
@@ -17,7 +18,6 @@
             left: 50%;
             -webkit-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
-            margin-bottom: 20px;
         }
 
         td {
@@ -28,25 +28,27 @@
 
 <h3>確認画面</h3>
 
-<div id="div">
-    <table border="1">
-        <tr><th>名前</th><td>@ViewBag.name</td></tr>
-        <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
-        <tr><th>性別</th><td></td></tr>
-        <tr><th>生年月日</th><td>@ViewBag.birthday</td></tr>
-        <tr><th>会員ID</th><td>@ViewBag.ID</td></tr>
-        <tr><th>パスワード</th><td>@ViewBag.rePassword</td></tr>
-        <tr><th>住所</th><td>@ViewBag.address</td></tr>
-        <tr><th>電話番号</th><td>@ViewBag.phonenum</td></tr>
-        <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
-    </table>
-    <br>
-</div>
-
 <div>
-    @using (Html.BeginForm())
-    {
-        <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
-        <div><input type="submit" name="send" value="登録する"></div>
-    }
+    <div id="div">
+        <table border="1">
+            <tr><th>名前</th><td>@ViewBag.name</td></tr>
+            <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
+            <tr><th>性別</th><td></td></tr>
+            <tr><th>生年月日</th><td>@ViewBag.birthday</td></tr>
+            <tr><th>会員ID</th><td>@ViewBag.ID</td></tr>
+            <tr><th>パスワード</th><td>@ViewBag.rePassword</td></tr>
+            <tr><th>住所</th><td>@ViewBag.address</td></tr>
+            <tr><th>電話番号</th><td>@ViewBag.phonenum</td></tr>
+            <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
+        </table>
+        <br>
+    </div>
+
+    <div>
+        @using (Html.BeginForm())
+        {
+            <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
+            <div><input type="submit" name="send" value="登録する"></div>
+        }
+    </div>
 </div>
