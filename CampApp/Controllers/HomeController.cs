@@ -45,6 +45,7 @@ namespace CampApp.Controllers
             {
                 ViewBag.name = model.name;
                 ViewBag.furigana = model.furigana;
+                ViewBag.gender = model.gender;
                 ViewBag.birthday = model.birthday;
                 ViewBag.ID = model.ID;
                 ViewBag.rePassword = model.rePassword;
