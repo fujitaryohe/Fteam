@@ -51,7 +51,7 @@ namespace CampApp.Controllers
                 ViewBag.ID = model.ID;
                 ViewBag.rePassword = model.rePassword;
                 ViewBag.address = model.address;
-                ViewBag.phonenum = model.phonenum;
+                ViewBag.phonenum = model.phonnum;
                 ViewBag.mail = model.mail;
 
             }
