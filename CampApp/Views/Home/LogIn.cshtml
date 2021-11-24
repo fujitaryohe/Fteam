@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Let's Camp!";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/Style.css" />
+    <style>
+        div {
+            display: flex;
+            justify-content: center;
+            margin-top: 200px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <form id="LogInBox">
+            <h6>会員ID</h6>
+            <input type="text" size="30" name="ID">
+            <h6>パスワード</h6>
+            <input type="password" name="password"><br><br>
+            <input type="submit" value="ログイン" style="margin-left:100px">
+        </form>
+    </div>
+
+    <p><a asp-area="" asp-controller="Home" asp-action="Subscription">会員登録がお済でない方はこちら</a></p>
+</body>
