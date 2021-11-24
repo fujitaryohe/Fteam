@@ -4,8 +4,24 @@
     ViewData["Title"] = "Let's Camp!";
 }
 
+<head>
+    <style>
+        div {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+
+        td {
+            text-align: center;
+        }
+    </style>
+</head>
+
 <h3>確認画面</h3>
-<div style="position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%,-50%); transform: translate(-50%,-50%);">
+<div>
     <table border="1">
         <tr><th>名前</th><td>@ViewBag.name</td></tr>
         <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
