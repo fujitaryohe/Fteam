@@ -33,6 +33,20 @@ namespace CampApp.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Subscription(SubscriptionModel model)
+        {
+            if (model != null)
+            {
+                ViewBag.name = model.name;
+            }
+            else
+            {
+                ViewBag.name = "No Name";
+            }
+            return View(model);
+        }
+
         public IActionResult SubscCheck()
         {
             return View();
