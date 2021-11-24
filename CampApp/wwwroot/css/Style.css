@@ -1,0 +1,95 @@
+﻿#title {
+    text-align: center;
+    padding-top: 30px;
+}
+
+header {
+    background-image: url("../image/背景.jpg");
+    background-size: cover;
+    margin: auto;
+    height: 170px;
+}
+
+nav {
+    width: 1000px;
+    margin: auto;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    background-color: greenyellow;
+}
+
+ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+li {
+    display: block;
+    font-size: 20px;
+    list-style-type: none;
+    border-left: solid 3px;
+    background-color: aqua;
+}
+
+.main {
+    margin: auto;
+    width: 1000px;
+}
+
+
+img {
+    width: 400px;
+    border: solid 3px;
+}
+
+.img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart {
+    width: 20%;
+}
+
+.midashi {
+    text-align: center;
+    background-color: orange;
+}
+
+.item_name {
+    text-align: center;
+}
+
+th {
+    text-align: center;
+}
+
+#box {
+    width: 700px;
+    height: 300px;
+    border: solid 3px;
+    overflow-y: scroll;
+}
+
+#LogInBox {
+    width: 300px;
+    height: 200px;
+    border: solid 3px;
+}
+
+#LogIn {
+    font-size: 20px;
+    display: flex;
+    justify-content: end;
+    width: 1250px;
+}

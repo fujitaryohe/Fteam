@@ -1,10 +1,31 @@
 ﻿#title {
     text-align: center;
-    margin-bottom: 50px;
+    padding-top: 30px;
+}
+
+header {
+    background-image: url("../image/背景.jpg");
+    background-size: cover;
+    margin: auto;
+    height: 170px;
 }
 
 nav {
-    margin-top: 100px;
+    width: 1000px;
+    margin: auto;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+nav a:hover {
+    background-color: greenyellow;
 }
 
 ul {
@@ -18,13 +39,36 @@ li {
     list-style-type: none;
     border-left: solid 3px;
     background-color: aqua;
-    margin-bottom: 30px;
 }
 
-    li a:hover {
-        background-color: red;
-    }
+.main {
+    margin: auto;
+    width: 1000px;
+}
 
+
+img {
+    width: 400px;
+    border: solid 3px;
+}
+
+.img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart {
+    width: 20%;
+}
+
+.midashi {
+    text-align: center;
+    background-color: orange;
+}
+
+.item_name {
+    text-align: center;
+}
 
 th {
     text-align: center;
@@ -46,7 +90,6 @@ th {
 #LogIn {
     font-size: 20px;
     display: flex;
-    position: absolute;
-    top: 80px;
-    right: 135px;
+    justify-content: end;
+    width: 1250px;
 }

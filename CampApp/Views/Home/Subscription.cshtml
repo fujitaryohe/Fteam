@@ -3,13 +3,15 @@
 }
 
 <head>
-    <link rel="stylesheet" href="~/css/StyleSheet.css" />
+    <link rel="stylesheet" href="~/css/Style.css" />
 </head>
 
 <body>
     <header>
         <h1 id="title">Let's Camp!</h1>
-        <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン" id="LogIn"></a>
+        <div id="LogIn">
+            <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン"></a>
+        </div>
         <nav>
             <ul>
                 <li>
@@ -31,7 +33,7 @@
         </nav>
     </header>
 
-    <div class="container">
+    <div class="main">
         <h3>会員情報登録</h3>
         <p>
             以下のフォームに必要事項をご入力ください。<br>ログイン時は会員IDをご利用ください。
@@ -49,6 +51,7 @@
                 <tr><th>電話番号</th><td><input type="tel"></td></tr>
                 <tr><th>メールアドレス</th><td><input type="email" size="30"></td></tr>
             </table>
+
             <br>
             <h3>会員登録および個人情報取扱いについて</h3>
             <div id="box">
