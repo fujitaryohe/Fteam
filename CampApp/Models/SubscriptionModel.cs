@@ -9,7 +9,7 @@ namespace CampApp.Models
     {
         public string name { get; set; }
         public string furigana { get; set; }
-        public bool gender { get; set; }
+        public string gender { get; set; }
         public string birthday { get; set; }
         public string ID { get; set; }
         public string rePassword { get; set; }
