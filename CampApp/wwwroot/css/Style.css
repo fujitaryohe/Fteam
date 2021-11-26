@@ -95,6 +95,7 @@ th {
 }
 .map {
     text-align: center;
+    margin-top: 50px;
     margin-bottom: 100px;
 }
 .mainmap {
@@ -102,6 +103,7 @@ th {
     padding: 1rem 2rem;
     border-bottom: 6px solid #094;
     font-size: 32px;
+    text-align: center;
 }
     .mainmap:before {
         position: absolute;
@@ -112,3 +114,7 @@ th {
         content: '';
         background: #00cc5b;
     }
+.mainmini{
+    font-size: 12px;
+    text-align: center;
+}
