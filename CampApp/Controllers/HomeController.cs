@@ -48,11 +48,11 @@ namespace CampApp.Controllers
                 ViewBag.gender = model.gender;
                 ViewBag.birthday = model.birthday;
                 ViewBag.ID = model.ID;
+                ViewBag.password = model.password;
                 ViewBag.rePassword = model.rePassword;
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
                 ViewBag.mail = model.mail;
-
             }
             else
             {

@@ -12,6 +12,7 @@ namespace CampApp.Models
         public string gender { get; set; }
         public string birthday { get; set; }
         public string ID { get; set; }
+        public string password { get; set; }
         public string rePassword { get; set; }
         public string address { get; set; }
         public string phonenum { get; set; }
