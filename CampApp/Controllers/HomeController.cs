@@ -33,11 +33,6 @@ namespace CampApp.Controllers
             return View();
         }
 
-        public IActionResult SubscCheck()
-        {
-            return View();
-        }
-
         [HttpPost]
         public IActionResult SubscCheck(SubscriptionModel model)
         {
@@ -48,7 +43,6 @@ namespace CampApp.Controllers
                 ViewBag.gender = model.gender;
                 ViewBag.birthday = model.birthday;
                 ViewBag.ID = model.ID;
-                ViewBag.password = model.password;
                 ViewBag.rePassword = model.rePassword;
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
@@ -59,6 +53,12 @@ namespace CampApp.Controllers
                 ViewBag.name = "No Name";
             }
             return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult SubscFinish()
+        {
+            return View();
         }
 
         public IActionResult E_Commerce()
