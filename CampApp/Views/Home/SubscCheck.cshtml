@@ -25,27 +25,30 @@
     </style>
 </head>
 
-<h3>確認画面</h3>
-<div>
-    <table border="1">
-        <tr><th>名前</th><td>@ViewBag.name</td></tr>
-        <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
-        <tr><th>性別</th><td>@ViewBag.gender</td></tr>
-        <tr><th>生年月日</th><td>@ViewBag.birthday</td></tr>
-        <tr><th>会員ID</th><td>@ViewBag.ID</td></tr>
-        <tr><th>パスワード</th><td>@ViewBag.HidePassword</td></tr>
-        <tr><th>郵便番号</th><td>〒@ViewBag.addressNum</td></tr>
-        <tr><th>住所</th><td>@ViewBag.address</td></tr>
-        <tr><th>電話番号</th><td>@ViewBag.phonenum</td></tr>
-        <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
-    </table>
-</div>
-<br>
 
-<div>
-    @using (Html.BeginForm("SubscFinish", "Home"))
-    {
-        <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
-        <div><input type="submit" name="send" value="登録する"></div>
-    }
-</div>
+<body>
+    <h3>確認画面</h3>
+    <div>
+        <table border="1">
+            <tr><th>名前</th><td>@ViewBag.name</td></tr>
+            <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
+            <tr><th>性別</th><td>@ViewBag.gender</td></tr>
+            <tr><th>生年月日</th><td>@ViewBag.birthday</td></tr>
+            <tr><th>会員ID</th><td>@ViewBag.ID</td></tr>
+            <tr><th>パスワード</th><td>@ViewBag.HidePassword</td></tr>
+            <tr><th>郵便番号</th><td>〒@ViewBag.addressNum</td></tr>
+            <tr><th>住所</th><td>@ViewBag.address</td></tr>
+            <tr><th>電話番号</th><td>@ViewBag.phonenum</td></tr>
+            <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
+        </table>
+    </div>
+    <br>
+
+    <div>
+        @using (Html.BeginForm("SubscFinish", "Home"))
+        {
+            <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
+            <div><input type="submit" name="send" value="登録する"></div>
+        }
+    </div>
+</body>
