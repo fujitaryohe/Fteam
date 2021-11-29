@@ -44,6 +44,7 @@ namespace CampApp.Controllers
                 ViewBag.birthday = model.birthday;
                 ViewBag.ID = model.ID;
                 ViewBag.rePassword = model.rePassword;
+                ViewBag.HidePassword = string.Concat(Enumerable.Repeat("＊", ViewBag.rePassword.Length));
                 ViewBag.addressNum = model.addressNum;
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
