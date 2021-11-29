@@ -44,6 +44,7 @@ namespace CampApp.Controllers
                 ViewBag.birthday = model.birthday;
                 ViewBag.ID = model.ID;
                 ViewBag.rePassword = model.rePassword;
+                ViewBag.addressNum = model.addressNum;
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
                 ViewBag.mail = model.mail;
