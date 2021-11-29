@@ -8,7 +8,7 @@ header {
     background-image: url("../image/背景.jpg");
     background-size: cover;
     margin: auto;
-    height: 170px;
+    height: 250px;
 }
 
 nav {
@@ -45,6 +45,11 @@ li {
 .main {
     margin: auto;
     width: 1000px;
+}
+
+
+.cart_img {
+    width: 50px;
 }
 
 .item_img {
@@ -86,6 +91,10 @@ th {
 #LogIn {
     font-size: 20px;
     display: flex;
+    margin-left: 30px;
+}
+
+#Cart_LogIn {
+    display: flex;
     justify-content: end;
-    width: 1250px;
 }
