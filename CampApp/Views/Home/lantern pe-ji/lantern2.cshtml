@@ -1,0 +1,115 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Let's Camp!";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <h1 id="title">Let's Camp!</h1>
+        <div id="LogIn">
+            <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">ホームページ</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Rental">レンタル</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Subscription">会員登録</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="E_Commerce">電子商取引について</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Inquiry">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="main">
+        <p>ホームページ</p>
+    </div>
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+
+
+</body>
+
+}
+<!-- コンテンツ ここから -->
+<h2>モダンランタン</h2>
+
+<dl class="dl-list-01">
+    <!--商品情報-->
+    <dt><a href="#"><img src="~/image/lantern/bambooモダンランタン.jpg" alt="" width="150" height="150" /></a></dt>
+    <dd>
+        <p>モダンランタン</p>
+    </dd>
+    <form method="post" action="https://ドメイン/CART/cart.php">
+        <input type="hidden" name="ITM" value="商品番号">
+        色：
+        <select name="VAR1">
+            <option value="レッド">レッド</option>
+            <option value="ブルー">ブルー</option>
+            <option value="グリーン">グリーン</option>
+            <option value="ピンク">ピンク</option>
+        </select>
+        個数
+        <select name="VAR2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <input type="submit" value="カゴへ">
+    </form>
+
+    <dd>
+        <p> 暖かく優しいオレンジ色の光</p>
+        <p>アンティーク風のおしゃれな見た目で雰囲気が出ます。</p>
+
+        <p>アウトドアのサブランタンとして！</p>
+
+        <p>カラーバリエーションも豊富です。</p>
+
+        <p>明るさは無段階調節ができるので使用状況に合わせて使えます。</p>
+
+        <p>■サイズ（約）：外径120×高さ220mm（取っ手含まず）</p>
+
+        <p>■重量（約）：230g（乾電池含まず）</p>
+
+        <p>■仕様：光源：暖色LED（発光ダイオード）12個、</p>
+
+        <p>■電源：DC6V単３形乾電池４個使用（別売）、</p>
+
+        <p>電池寿命：連続最小約8～最大24時間（アルカリ乾電池使用時）</p>
+
+        <p>※使用状況により異なります。</p>
+
+        <p>■材質：本体・持ち手：鉄（ラッカー塗装）、スイッチ：ABS樹脂、リフレクター：ポリスチレン、ホヤ：ガラス</p>
+    </dd>
+
+</dl>
+

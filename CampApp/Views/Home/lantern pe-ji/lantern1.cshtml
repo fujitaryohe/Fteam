@@ -1,0 +1,97 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Let's Camp!";
+}
+<head>
+    <link rel="stylesheet" href="~/css/Style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <h1 id="title">Let's Camp!</h1>
+        <div id="LogIn">
+            <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">ホームページ</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Rental">レンタル</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Subscription">会員登録</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="E_Commerce">電子商取引について</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Inquiry">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="main">
+        <p>ホームページ</p>
+    </div>
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+
+
+</body>
+}
+<!-- コンテンツ ここから -->
+<h2>2マルチパネルランタン</h2>
+
+<dl class="dl-list-01">
+    <!--商品情報-->
+    <dt><a href="#"><img src="~/image/lantern/2マルチパネルランタン.jpg" alt="" width="150" height="150" /></a></dt>
+    <dd>
+        <p>2マルチパネルランタン</p>
+    </dd>
+    <form method="post" action="https://ドメイン/CART/cart.php">
+        <input type="hidden" name="ITM" value="商品番号">
+        色：
+        <select name="VAR1">
+            <option value="レッド">レッド</option>
+            <option value="ブルー">ブルー</option>
+            <option value="グリーン">グリーン</option>
+            <option value="ピンク">ピンク</option>
+        </select>
+        個数
+        <select name="VAR2">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+        </select>
+        <input type="submit" value="カゴへ">
+    </form>
+
+    <dd>
+        <p>① 高輝度ランタン→ ! キャンプ(Camp)・テント内ライト・登山・バーベキュー(BBQ)・夜釣り・昆虫採集・車中泊・ハイキング・夜のウォーキング・車やバイクのメンテナンス・卓上ｌｉｇｈｔ・読書灯・室内照明・玄関や廊下の足元灯としても便利なランタンです。</p>
+
+        <p>②懐中電灯→アウトドア・作業・室内での作業灯、電源の無い作業場、倉庫照明等；車、バイクの整備の作業に適切します。犬散歩!</p>
+
+        <p>③SOS→緊急事態の場合に、援助を求められる 車の緊急ランプ、防災防犯・避難時・非常時・災害時・停電時、地震や台風などの災害で万一電力供給がストップしても照明機能を保ち、防犯や避難などに貢献します。</p>
+
+    </dd>
+
+</dl>
