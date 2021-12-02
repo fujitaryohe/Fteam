@@ -33,9 +33,22 @@
         </nav>
     </header>
 
-    <div class="main">
-        <p>ホームページ</p>
+    <div class="mainmap">
+        <p>チャットボットを利用して地図からさがす</p>
+        <div class="mainmini">
+            <p>チャットボットで簡単に自分たちに合ったキャンプ場を探してマップでキャンプ場の詳細を確認できます。</p>
+        </div>
     </div>
+
+    <div class="map">
+        <iframe src="https://www.google.com/maps/d/u/0/embed?mid=10VrnZNUAMlqgmobPf91_iYSs2qiyQLm4" width="1150" height="600"></iframe>
+    </div>
+ 
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+    <df-messenger intent="WELCOME"
+                  chat-title="Camp"
+                  agent-id="f72ab783-5e22-4baa-82b2-5dfb9883e5b4"
+                  language-code="ja"></df-messenger>
 
     <footer class="border-top footer text-muted">
         <div class="container">
