@@ -12,10 +12,12 @@
         <tr><th>お問い合わせ内容</th><td>@ViewBag.message</td></tr>
     </table>
 
+
     @using (Html.BeginForm("InquiryFinish", "Home"))
     {
         <p>この内容でよろしければ、「送信する」ボタンを押してください。</p>
         <input type="submit" value="送信する">
     }
+
 
 </body>
