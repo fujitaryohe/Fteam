@@ -1,0 +1,21 @@
+﻿@model CampApp.Models.InquiryModel;
+
+<body>
+    <h3>確認画面</h3>
+    <table border="1">
+        <tr><th>お名前</th><td>@ViewBag.name</td></tr>
+        <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
+        <tr><th>性別</th><td>@ViewBag.gender</td></tr>
+        <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
+        <tr><th>電話番号</th><td>@ViewBag.tel</td></tr>
+        <tr><th>お問い合わせ項目</th><td>@ViewBag.inquiryGroup</td></tr>
+        <tr><th>お問い合わせ内容</th><td>@ViewBag.message</td></tr>
+    </table>
+
+    @using (Html.BeginForm("InquiryFinish", "Home"))
+    {
+        <p>この内容でよろしければ、「送信する」ボタンを押してください。</p>
+        <input type="submit" value="送信する">
+    }
+
+</body>

@@ -78,6 +78,107 @@ namespace CampApp.Controllers
             return View();
         }
 
+        public IActionResult Tent1()
+        {
+            return View();
+        }
+
+        public IActionResult Tent2()
+        {
+            return View();
+        }
+
+        public IActionResult Tent3()
+        {
+            return View();
+        }
+
+        public IActionResult Tent4()
+        {
+            return View();
+        }
+
+        public IActionResult Chair1()
+        {
+            return View();
+        }
+
+        public IActionResult Chair2()
+        {
+            return View();
+        }
+
+        public IActionResult Chair3()
+        {
+            return View();
+        }
+
+        public IActionResult Chair4()
+        {
+            return View();
+        }
+
+        public IActionResult Chair5()
+        {
+            return View();
+        }
+
+        public IActionResult Chair6()
+        {
+            return View();
+        }
+
+        public IActionResult Sherahu1()
+        {
+            return View();
+        }
+
+        public IActionResult Sherahu2()
+        {
+            return View();
+        }
+
+        public IActionResult Sherahu3()
+        {
+            return View();
+        }
+
+        public IActionResult Sherahu4()
+        {
+            return View();
+        }
+
+        public IActionResult Sherahu5()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult InquiryCheck(InquiryModel model)
+        {
+            if (model != null)
+            {
+                ViewBag.name = model.name;
+                ViewBag.furigana = model.furigana;
+                ViewBag.gender = model.gender;
+                ViewBag.mail = model.mail;
+                ViewBag.tel = model.tel;
+                ViewBag.inquiryGroup = model.inquiryGroup;
+                ViewBag.message = model.message;
+            }
+            else
+            {
+                ViewBag.name = "No Name";
+            }
+            return View(model);
+        }
+
+        [HttpPost]
+        public IActionResult InquiryFinish(InquiryModel model)
+        {
+            return View(model);
+        }
+
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
