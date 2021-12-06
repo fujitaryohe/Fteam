@@ -53,6 +53,14 @@ namespace CampApp.Controllers
         {
             return View();
         }
+        public IActionResult RantanSyousai()
+        {
+            return View();
+        }
+        public IActionResult SyerafuSyousai()
+        {
+            return View();
+        }
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

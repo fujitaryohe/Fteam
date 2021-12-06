@@ -1,21 +1,51 @@
-﻿@{
-    <div>
-        <h1>【特定商取引法に基づく表記】</h1>
-        <table bgcolor="#999999" border="1" cellpadding="9" cellspacing="1" style="font-size:13px;text-align:left">
-            <tr><th bgcolor="#EEEEEE">販売社名</th><td bgcolor="#FFFFFF">株式会社F</td></tr>
-            <tr><th bgcolor="#EEEEEE">運営統括責任者</th><td bgcolor="#FFFFFF">team F</td></tr>
-            <tr><th bgcolor="#EEEEEE">所在地</th><td bgcolor="#FFFFFF">wiz</td></tr>
-            <tr><th bgcolor="#EEEEEE">電話番号</th><td bgcolor="#FFFFFF">00-0000-0000</td></tr>
-            <tr><th bgcolor="#EEEEEE">メールアドレス</th><td bgcolor="#FFFFFF"> wiz@wiz.jp</td></tr>
-            <tr><th bgcolor="#EEEEEE">販売URL</th><td bgcolor="#FFFFFF"> http://————</td></tr>
-            <tr><th bgcolor="#EEEEEE">お支払い方法</th><td bgcolor="#FFFFFF">クレジットカード<br />代金引換<br /></td></tr>
-            <tr><th bgcolor="#EEEEEE">商品代金以外の<br />必要金額</th><td bgcolor="#FFFFFF">代金引換の場合、代引き手数料<br />代引き手数料：１万円未満●円　３万円未満●円　３万円以上●円　１０万円以上３０万円まで●円です。<br />送料：本州●円　四国・九州・北海道：●円　沖縄：●円離島料金は掛かりません。</td></tr>
-            <tr><th bgcolor="#EEEEEE">販売数量</th><td bgcolor="#FFFFFF">●個から</td></tr>
-            <tr><th bgcolor="#EEEEEE">お申込み有効期限</th><td bgcolor="#FFFFFF">●日以内にお願いいたします。<br /> ●日間入金がない場合は、キャンセルとさせていただきます。</td></tr>
-            <tr><th bgcolor="#EEEEEE">商品引渡し時期</th><td bgcolor="#FFFFFF">前払いの場合、指定日が無ければ入金確認後●営業日以内で発送致します。<br />代引の場合、指定日が無ければご注文確認後●日営業日以内で発送致します。<br />その他の支払方法の場合、指定日が無ければご注文後●日営業日以内で発送致します。<br />後払いの場合、商品到着後●日以内にご入金ください。<br /> </td></tr>
-            <tr><th bgcolor="#EEEEEE">商品引渡し方法</th><td bgcolor="#FFFFFF">当方にて手配後、運送会社による配送</td></tr>
-            <tr><th bgcolor="#EEEEEE">返品・不良品について</th><td bgcolor="#FFFFFF">「不良品・当社の商品の間違い」の場合は当社が負担いたします。<br /> 配送途中の破損などの事故がございましたら、弊社までご連絡下さい。<br /> 送料・手数料ともに弊社負担で早急に新品をご送付致します。<br /><br /> 【返品対象】<br />「不良品・当社の商品の間違い」の場合<br /><br /> 【返品時期】<br />ご購入後●日以内にご連絡があった場合に返金可能となります。<br /><br /> 【返品方法】<br />メールにて返金要請してください。<br />●日以内にご購入代金を指定の口座へお振込みいたします。</td></tr>
-            <tr><th bgcolor="#EEEEEE">表現、及び商品に<br />関する注意書き</th><td bgcolor="#FFFFFF">本商品に示された表現や再現性には個人差があり、<br />必ずしも利益や効果を保証したものではございません。</td>
-        </table>
+﻿@{ ViewData["Title"] = "Let's Camp!"; }
+<head>
+    <link rel="stylesheet" href="~/css/Style.css">
+</head>
+
+
+
+<body>
+    <header>
+        <h1 id="title">Let's Camp!</h1>
+        <div id="LogIn">
+            <a asp-area="" asp-controller="Home" asp-action="LogIn"><input type="button" value="ログイン"></a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">ホームページ</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Rental">レンタル</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Subscription">会員登録</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="E_Commerce">電子商取引について</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Inquiry">お問い合わせ</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <div class="main">
+        <p>ホームページ</p>
     </div>
-}
+
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+
+
+</body>

@@ -1,0 +1,66 @@
+﻿@{ ViewData["Title"] = "syerafu"; }
+<head>
+    <meta charset="UTF-8">
+    <title>
+        ダウンプラスニルギリ詳細
+    </title>
+    <link rel="stylesheet" href="~/css/Rantan.css">
+
+</head>
+
+
+
+<body>
+    <h1>ダウンプラスニルギリ</h1>
+    <div id="rantan">
+        <div><img src="~/image/ダウンプラスニルギリ.jpg"></div>
+        <div id="flex">
+            <label for="time"> 利用期間</label><br>
+
+            <input type="date" id="time" name="time" value="2021-11-25"
+                   min="2021-01-01" max="2022-12-31"><br><br>
+            <label for="pet-select">数量</label>
+            <select name="comb" id="comb">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+            値段(税込み)
+            <p>2000¥</p><br>
+            <input class="favorite styled"
+                   type="button"
+                   value="カートに入れる">
+
+        </div>
+    </div>
+    <ul>
+        <li>
+            この商品について
+            <ul>
+                <li>生地 : 表ポリエステル100%、裏ポリエステル100%</li>
+                <li>羽毛量 : 700g(90/10 700フィルパワー)(一般的に550フィルパワ-以上で高品質とされ、770~800フィルパワ-のものが最も良質とされています。)</li>
+                <li>サイズ : 肩幅80×全長207cm</li>
+                <li>収納サイズ : 直径20×40cm(収納スタッフバッグ付)</li>
+                <li>重量 : 1350g</li>
+                <li>カラー : ブルー</li>
+                <li>対応温度 : マイナス15℃</li>
+                <li>構造 : ボックス構造 、ドラフトチューブ、ゆったりした足元、YKKコイルジッパー</li>
+            </ul>
+        </li>
+
+    </ul>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+</body>

@@ -1,0 +1,66 @@
+﻿@{ ViewData["Title"] =  "Rantan"; }
+<head>
+    <meta charset="UTF-8">
+    <title>
+        bambooモダンランタン詳細
+    </title>
+    <link rel="stylesheet" href="~/css/Rantan.css">
+
+</head>
+
+
+
+<body>
+    <h1>bambooモダンランタン</h1>
+    <div id="rantan">
+        <div><img src="~/image/bambooモダンランタン.jpg"></div>
+        <div id="flex">
+            <label for="time"> 利用期間</label><br>
+
+            <input type="date" id="time" name="time" value="2021-11-25"
+                   min="2021-01-01" max="2022-12-31"><br><br>
+            <label for="pet-select">数量</label>
+            <select name="comb" id="comb">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br><br>
+            値段(税込み)
+            <p>2000¥</p><br>
+            <input class="favorite styled"
+                   type="button"
+                   value="カートに入れる">
+
+        </div>
+    </div>
+        <ul>
+            <li>この商品について
+                <ul>
+                    <li>総重量(:約)870g</li>
+                    <li>サイズ(:約)幅20×奥行15×高さ33.5cm</li>
+                    <li>明るさ[: LED球値](約)200ルーメン [ロゴス基準値](約)167ルーメン</li>
+                    <li>光源: LED 電源:リチウムイオン蓄電池</li>
+                    <li>蓄電池容量: 5000mAh USB出力: DC5V1A</li>
+                    <li>点灯モード:ロータリー式無段階調光 常用点灯時間目安(:約)強/10時間、弱/100時間</li>
+                    <li>蓄電時間(:約)9時間 蓄電方式: USB蓄電 充電能力[: iPhone]約2.5台分 ※充電能力は、iPhoneのバッテリー容量を約2,000mAhとして計算した理論値です。</li>
+                    <li>構成:本体、本体蓄電用USBケーブル ※外部USB機器に充電するためのケーブルは付属していません。外部USB機器に付属しているケーブルをご使用ください。</li>
+                    <li></li>
+                </ul>
+            </li>
+
+        </ul>
+
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+</body>

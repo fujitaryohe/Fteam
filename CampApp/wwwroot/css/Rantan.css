@@ -1,0 +1,29 @@
+﻿   #rantan{
+       display:flex;
+       justify-content:space-between;
+       margin:100px;
+}
+img {
+    width: 500px;
+    height:500px;
+}
+#flex {
+    flex-basis: 40%; 
+}
+input {
+    margin:10px;
+}
+h1 {
+    position: relative;
+    left: 100px
+}
+li {
+    list-style-type: circle;
+}
+
+    li li {
+        list-style-type: square;
+    }
+
+
+
