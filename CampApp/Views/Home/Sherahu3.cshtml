@@ -37,10 +37,37 @@
 
 
     <div class="main">
-        <p>ホームページ</p>
+        <h2>ダウンプラスニルギリ</h2>
+        <img src="~/image/sherahu/ダウンプラスニルギリ.jpg" alt="" width="150" height="150" />
+        <p>HAWK GEAR(ホークギア)のマミー型寝袋（シュラフ）です。-15度耐寒。</p>
+        <p>丸洗い可能。水温30℃以下で洗い、乾燥機を使わず日干しくださいませ。</p>
+        <p>素材　コットンファイバー　・仕様　簡易防水・防風仕様</p>
+        <p>超断熱仕様で、快適睡眠！（調整紐を締め、防寒着を着用ください。）</p>
+        <p>HAWK GEARとして商標登録済（登録第５８５４７７６号）</p>
+        @using (Html.BeginForm())
+        {
+            <form>
+                <input type="hidden" name="ITM" value="商品番号">
+                色：
+                <select name="VAR1">
+                    <option value="レッド">レッド</option>
+                    <option value="ブルー">ブルー</option>
+                    <option value="グリーン">グリーン</option>
+                    <option value="ピンク">ピンク</option>
+                </select>
+                個数
+                <select name="VAR2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="submit" value="カゴへ">
+            </form>
+        }
     </div>
-
-
 
     <footer class="border-top footer text-muted">
         <div class="container">
@@ -48,46 +75,4 @@
         </div>
     </footer>
 
-
-
 </body>
-}
-<!-- コンテンツ ここから -->
-<h2>ダウンプラスニルギリ</h2>
-
-<dl class="dl-list-01">
-    <!--商品情報-->
-    <dt><a href="#"><img src="~/image/sherahu/ダウンプラスニルギリ.jpg" alt="" width="150" height="150" /></a></dt>
-    <dd>
-        <p>ダウンプラスニルギリ</p>
-    </dd>
-    <form method="post" action="https://ドメイン/CART/cart.php">
-        <input type="hidden" name="ITM" value="商品番号">
-        色：
-        <select name="VAR1">
-            <option value="レッド">レッド</option>
-            <option value="ブルー">ブルー</option>
-            <option value="グリーン">グリーン</option>
-            <option value="ピンク">ピンク</option>
-        </select>
-        個数
-        <select name="VAR2">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-        <input type="submit" value="カゴへ">
-    </form>
-
-    <dd>
-        <p>HAWK GEAR(ホークギア)のマミー型寝袋（シュラフ）です。-15度耐寒。</p>
-        <p>丸洗い可能。水温30℃以下で洗い、乾燥機を使わず日干しくださいませ。</p>
-        <p>素材　コットンファイバー　・仕様　簡易防水・防風仕様</p>
-        <p>超断熱仕様で、快適睡眠！（調整紐を締め、防寒着を着用ください。）</p>
-        <p>HAWK GEARとして商標登録済（登録第５８５４７７６号）</p>
-    </dd>
-
-</dl>

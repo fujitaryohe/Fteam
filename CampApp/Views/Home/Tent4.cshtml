@@ -40,52 +40,8 @@
 
 
     <div class="main">
-        <p>ホームページ</p>
-    </div>
-
-
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy;Fチーム
-        </div>
-    </footer>
-
-
-
-</body>
-}
-<!-- コンテンツ ここから -->
-<h2>テント４</h2>
-
-<dl class="dl-list-01">
-    <!--商品情報-->
-    <dt><a href="#"><img src="~/image/テント4.jpg" alt="" width="150" height="150" /></a></dt>
-    <dd>
-        <p>テント４</p>
-    </dd>
-    <form method="post" action="https://ドメイン/CART/cart.php">
-        <input type="hidden" name="ITM" value="商品番号">
-        色：
-        <select name="VAR1">
-            <option value="レッド">レッド</option>
-            <option value="ブルー">ブルー</option>
-            <option value="グリーン">グリーン</option>
-            <option value="ピンク">ピンク</option>
-        </select>
-        個数
-        <select name="VAR2">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-        <input type="submit" value="カゴへ">
-    </form>
-
-    <dd>
+        <h2>テント４</h2>
+        <img src="~/image/テント4.jpg" alt="" width="150" height="150" />
         <p>1人用</p>
         <p> サイズ(約):フライW360xD190xH110cm・インナーW190xD85xH100cm・収納時W47xD24xH24cm</p>
         <p>材質:フライ/コットン混紡生地(ポリエステル65%・綿35%)・インナー/ポリエステルメッシュ・フロア/ポリエステル・フレーム/アルミ合金</p>
@@ -93,6 +49,35 @@
         <p>組立式</p>
         <p>付属品:ペグx18、ロープx6（フタマタロープ×2、約2mmロープ×2、約1mmロープ×2）、エンドキャップx2、収納ケースx1</p>
 
-    </dd>
+        @using (Html.BeginForm())
+        {
+            <form>
+                <input type="hidden" name="ITM" value="商品番号">
+                色：
+                <select name="VAR1">
+                    <option value="レッド">レッド</option>
+                    <option value="ブルー">ブルー</option>
+                    <option value="グリーン">グリーン</option>
+                    <option value="ピンク">ピンク</option>
+                </select>
+                個数
+                <select name="VAR2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="submit" value="カゴへ">
+            </form>
+        }
+    </div>
 
-</dl>
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+</body>

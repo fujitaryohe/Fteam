@@ -37,51 +37,8 @@
 
 
     <div class="main">
-        <p>ホームページ</p>
-    </div>
-
-
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy;Fチーム
-        </div>
-    </footer>
-
-
-
-</body>
-<!-- コンテンツ ここから -->
-<h2>コンパクトチェア</h2>
-
-<dl class="dl-list-01">
-    <!--商品情報-->
-    <dt><a href="#"><img src="~/image/chair/chair2.jpg" alt="" width="150" height="150" /></a></dt>
-    <dd>
-        <p>コンパクトチェア</p>
-    </dd>
-    <form method="post" action="https://ドメイン/CART/cart.php">
-        <input type="hidden" name="ITM" value="商品番号">
-        色：
-        <select name="VAR1">
-            <option value="レッド">レッド</option>
-            <option value="ブルー">ブルー</option>
-            <option value="グリーン">グリーン</option>
-            <option value="ピンク">ピンク</option>
-        </select>
-        個数
-        <select name="VAR2">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-        </select>
-        <input type="submit" value="カゴへ">
-    </form>
-
-    <dd>
+        <h2>コンパクトチェア</h2>
+        <img src="~/image/chair/chair2.jpg" alt="" width="150" height="150" />
         <p> OneTigris マルチカム迷彩 ポータブルキャンプチェア</p>
         <p>組立やすく、収納にも簡単で、効率的な持ち運びのために非常に軽量な、アウトドアに欠かせないアイテム。</p>
 
@@ -101,6 +58,36 @@
             掲載写真はできる限り実物の色味に近づくように加工・調整しておりますが、 お客様がお使いのモニターの設定や天候・照明の当たり具合などにより、実物の色味と異なって見えることがございます。
             静止耐荷重は目安としての測定値であって、保証値ではありません。
         </p>
-    </dd>
 
-</dl>
+        @using (Html.BeginForm())
+        {
+            <form>
+                <input type="hidden" name="ITM" value="商品番号">
+                色：
+                <select name="VAR1">
+                    <option value="レッド">レッド</option>
+                    <option value="ブルー">ブルー</option>
+                    <option value="グリーン">グリーン</option>
+                    <option value="ピンク">ピンク</option>
+                </select>
+                個数
+                <select name="VAR2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+                <input type="submit" value="カゴへ">
+            </form>
+        }
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy;Fチーム
+        </div>
+    </footer>
+
+</body>
