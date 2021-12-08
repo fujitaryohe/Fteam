@@ -43,8 +43,12 @@ li {
 }
 
 .main {
-    margin: auto;
+    margin: auto 0px;
     width: 1000px;
+}
+
+.center {
+    justify-content:center;
 }
 
 .item_img {

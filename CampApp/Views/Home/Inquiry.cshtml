@@ -34,39 +34,40 @@
     </header>
 
     <div class="main">
-        <br>
-        @using (Html.BeginForm("InquiryCheck", "Home"))
-        {
-            <h1>お問い合わせ 内容入力</h1>
-            <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
-            <div>
-                <table border="1">
-                    <tr><th>お名前</th><td><input type="text" name="name" placeholder="例）山田太郎" value="" required></td></tr>
-                    <tr><th>フリガナ</th><td><input type="text" name="furigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" placeholder="例）やまだたろう" value="" required></td></tr>
-                    <tr>
-                        <th>性別</th>
-                        <td>
-                            <label><input type="radio" name="gender" value="男性" required> 男性</label>
-                            <label><input type="radio" name="gender" value="女性" required> 女性</label>
-                        </td>
-                    </tr>
-                    <tr><th>メールアドレス</th><td><input type="email" name="mail" placeholder="例）guest@example.com" value="" required></td></tr>
-                    <tr><th>電話番号</th><td><input type="tel" name="tel" pattern="\d{2,4}-\d{3,4}-\d{3,4}" placeholder="ハイフン記号あり" value="" required></td></tr>
-                    <tr>
-                        <th>お問い合わせ項目</th>
-                        <td>
-                            <select name="inquiryGroup" required>
-                                <option value="">お問い合わせ項目を選択してください</option>
-                                <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
-                                <option value="ご意見・ご感想">ご意見・ご感想</option>
-                            </select>
-                        </td>
-                    </tr>
-                    <tr><th>お問い合わせ内容</th><td><textarea name="message" rows="5" placeholder="お問合せ内容を入力" required></textarea></td></tr>
-                </table>
-            </div>
-            <button type="submit">確認画面へ</button>
-        }
+        <div>
+            @using (Html.BeginForm("InquiryCheck", "Home"))
+            {
+                <h1>お問い合わせ 内容入力</h1>
+                <p>お問い合わせ内容をご入力の上、「確認画面へ」ボタンをクリックしてください。</p>
+                <div>
+                    <table border="1">
+                        <tr><th>お名前</th><td><input type="text" name="name" placeholder="例）山田太郎" value="" required></td></tr>
+                        <tr><th>フリガナ</th><td><input type="text" name="furigana" pattern="(?=.*?[\u30A1-\u30FC])[\u30A1-\u30FC\s]*" placeholder="例）やまだたろう" value="" required></td></tr>
+                        <tr>
+                            <th>性別</th>
+                            <td>
+                                <label><input type="radio" name="gender" value="男性" required> 男性</label>
+                                <label><input type="radio" name="gender" value="女性" required> 女性</label>
+                            </td>
+                        </tr>
+                        <tr><th>メールアドレス</th><td><input type="email" name="mail" placeholder="例）guest@example.com" value="" required></td></tr>
+                        <tr><th>電話番号</th><td><input type="tel" name="tel" pattern="\d{2,4}-\d{3,4}-\d{3,4}" placeholder="ハイフン記号あり" value="" required></td></tr>
+                        <tr>
+                            <th>お問い合わせ項目</th>
+                            <td>
+                                <select name="inquiryGroup" required>
+                                    <option value="">お問い合わせ項目を選択してください</option>
+                                    <option value="ご質問・お問い合わせ">ご質問・お問い合わせ</option>
+                                    <option value="ご意見・ご感想">ご意見・ご感想</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr><th>お問い合わせ内容</th><td><textarea name="message" rows="5" placeholder="お問合せ内容を入力" required></textarea></td></tr>
+                    </table>
+                </div>
+                <button type="submit">確認画面へ</button>
+            }
+        </div>
     </div>
 
     <footer class="border-top footer text-muted">
