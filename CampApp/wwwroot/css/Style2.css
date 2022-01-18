@@ -12,7 +12,8 @@ header {
 }
 
 nav {
-    width: 1000px;
+    /*width: 1000px;*/
+    width:auto;
     margin: auto;
 }
 
@@ -43,7 +44,8 @@ li {
 }
 
 .main {
-    width: 1000px;
+    /*width: 1000px;*/
+    width:auto;
 }
 
 .center {
