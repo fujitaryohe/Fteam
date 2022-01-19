@@ -58,13 +58,13 @@
         }
     </script>
 
-    <div class="main">
-        <h3>会員情報登録</h3>
-        <p>
-            以下のフォームに必要事項をご入力ください。<br>ログイン時は会員IDをご利用ください。
-        </p>
+    <div class="center">
         @using (Html.BeginForm("SubscCheck", "Home"))
         {
+            <h3>会員情報登録</h3>
+            <p>
+                以下のフォームに必要事項をご入力ください。<br>ログイン時は会員IDをご利用ください。
+            </p>
             <form>
                 <table border="1">
                     <tr><th>お名前</th><td><input type="text" name="name" size="30" pattern=".*\S+.*" placeholder="名前" required></td></tr>
