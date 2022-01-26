@@ -1,10 +1,12 @@
 ﻿using CampApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CampApp.Controllers
@@ -49,17 +51,89 @@ namespace CampApp.Controllers
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
                 ViewBag.mail = model.mail;
+
+                TempData["name"] = model.name;
+                TempData["furigana"] = model.furigana;
+                TempData["gender"] = model.gender;
+                TempData["birthday"] = model.birthday;
+                TempData["ID"] = model.ID;
+                TempData["rePassword"] = model.rePassword;
+                TempData["HidePassword"] = string.Concat(Enumerable.Repeat("＊", model.rePassword.Length));
+                TempData["addressNum"] = model.addressNum;
+                TempData["address"] = model.address;
+                TempData["phonenum"] = model.phonenum;
+                TempData["mail"] = model.mail;
+
+                return View();
+
             }
             else
             {
                 ViewBag.name = "No Name";
             }
-            return View(model);
+
+            return RedirectToAction("SubsuFinish");
         }
 
         [HttpPost]
-        public IActionResult SubscFinish()
+        [ValidateAntiForgeryToken]
+        public IActionResult SubscFinish(string send)
         {
+            if (send != null)
+            {
+                try
+                {
+                    // 接続情報の作成 
+                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    builder.DataSource = "wizazure2021watanabetakuto.database.windows.net"; // 接続DBサーバー 
+                    builder.UserID = "azureuser"; // 管理者ID 
+                    builder.Password = "xsfE2484"; // 管理者パスワード 
+                    builder.InitialCatalog = "wizazureclasswork2021watanabetakuto"; // DB名 
+
+                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+
+                    {
+                        Debug.WriteLine("\nQuery data example:");
+                        Debug.WriteLine("=========================================\n");
+                        // SQL文の作成 
+                        StringBuilder sb = new StringBuilder();
+
+                        string sql = "INSERT INTO UserTable VALUES("
+                            + "'" + TempData["ID"] + "',"
+                            + "N'" + TempData["name"] + "',"
+                            + "N'" + TempData["furigana"] + "',"
+                            + "'" + TempData["birthday"] + "',"
+                            + "'" + TempData["rePassword"] + "',"
+                            + "'" + TempData["addressNum"] + "',"
+                            + "N'" + TempData["address"] + "',"
+                            + "'" + TempData["phonenum"] + "',"
+                            + "N'" + TempData["mail"] + "',"
+                            + "N'" + TempData["gender"] + "'"
+                            +
+                            ")";
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            // 接続処理 
+                            connection.Open();
+
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    // データ表示 
+                                    Debug.WriteLine(reader["Name"]); // 表示列名の指定やり方 
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (SqlException e)
+                {
+                    Debug.WriteLine(e.ToString());
+                }
+            }
+
             return View();
         }
 
