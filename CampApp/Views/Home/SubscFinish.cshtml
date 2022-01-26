@@ -1,6 +1,4 @@
-﻿@model CampApp.Models.SubscriptionModel
-
-@{
+﻿@{
     ViewData["Title"] = "Let's Camp!";
 }
 
@@ -8,8 +6,18 @@
     <h1>登録完了画面</h1>
     <p>会員登録が完了しました。</p>
 
-    <p>名前：@ViewBag.name</p>
-
-
-
+    <div>
+        <table border="1">
+            <tr><th>お名前</th><td>@TempData["name"]</td></tr>
+            <tr><th>フリガナ</th><td>@TempData["furigana"]</td></tr>
+            <tr><th>性別</th><td>@TempData["gender"]</td></tr>
+            <tr><th>生年月日</th><td>@TempData["birthday"]</td></tr>
+            <tr><th>会員ID</th><td>@TempData["ID"]</td></tr>
+            <tr><th>パスワード</th><td>@TempData["HidePassword"]</td></tr>
+            <tr><th>郵便番号</th><td>〒@TempData["addressNum"]</td></tr>
+            <tr><th>住所</th><td>@TempData["address"]</td></tr>
+            <tr><th>電話番号</th><td>@TempData["phonenum"]</td></tr>
+            <tr><th>メールアドレス</th><td>@TempData["mail"]</td></tr>
+        </table>
+    </div>
 </body>

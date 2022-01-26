@@ -52,6 +52,35 @@ namespace CampApp.Controllers
                 ViewBag.phonenum = model.phonenum;
                 ViewBag.mail = model.mail;
 
+                TempData["name"] = model.name;
+                TempData["furigana"] = model.furigana;
+                TempData["gender"] = model.gender;
+                TempData["birthday"] = model.birthday;
+                TempData["ID"] = model.ID;
+                TempData["rePassword"] = model.rePassword;
+                TempData["HidePassword"] = string.Concat(Enumerable.Repeat("＊", model.rePassword.Length));
+                TempData["addressNum"] = model.addressNum;
+                TempData["address"] = model.address;
+                TempData["phonenum"] = model.phonenum;
+                TempData["mail"] = model.mail;
+
+                return View();
+
+            }
+            else
+            {
+                ViewBag.name = "No Name";
+            }
+
+            return RedirectToAction("SubsuFinish");
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult SubscFinish(string send)
+        {
+            if (send != null)
+            {
                 try
                 {
                     // 接続情報の作成 
@@ -69,32 +98,17 @@ namespace CampApp.Controllers
                         // SQL文の作成 
                         StringBuilder sb = new StringBuilder();
 
-                        //sb.Append("SELECT * ");
-                        //sb.Append("FROM UserTable");
-                        //String sql = sb.ToString();
-
-                        string UserID = model.ID;
-                        string Name = model.name;
-                        string Furigana = model.furigana;
-                        string Birthday = model.birthday;
-                        string Password = model.rePassword;
-                        string PosCode = model.addressNum;
-                        string Address = model.address;
-                        string PhoneNumber = model.phonenum;
-                        string Mail = model.mail;
-                        string Gender = model.gender;
-
                         string sql = "INSERT INTO UserTable VALUES("
-                            + "'" + UserID + "',"
-                            + "N'" + Name + "',"
-                            + "N'" + Furigana + "',"
-                            + "'" + Birthday + "',"
-                            + "'" + Password + "',"
-                            + "'" + PosCode + "',"
-                            + "N'" + Address + "',"
-                            + "'" + PhoneNumber + "',"
-                            + "N'" + Mail + "',"
-                            + "N'" + Gender + "'"
+                            + "'" + TempData["ID"] + "',"
+                            + "N'" + TempData["name"] + "',"
+                            + "N'" + TempData["furigana"] + "',"
+                            + "'" + TempData["birthday"] + "',"
+                            + "'" + TempData["rePassword"] + "',"
+                            + "'" + TempData["addressNum"] + "',"
+                            + "N'" + TempData["address"] + "',"
+                            + "'" + TempData["phonenum"] + "',"
+                            + "N'" + TempData["mail"] + "',"
+                            + "N'" + TempData["gender"] + "'"
                             +
                             ")";
 
@@ -119,16 +133,7 @@ namespace CampApp.Controllers
                     Debug.WriteLine(e.ToString());
                 }
             }
-            else
-            {
-                ViewBag.name = "No Name";
-            }
-            return View();
-        }
 
-        [HttpPost]
-        public IActionResult SubscFinish()
-        {
             return View();
         }
 
