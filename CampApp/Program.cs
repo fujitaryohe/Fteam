@@ -6,9 +6,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
+using System.Diagnostics;
+using System.Text;
 
 namespace CampApp
 {
+
     public class Program
     {
         public static void Main(string[] args)

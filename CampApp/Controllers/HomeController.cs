@@ -1,10 +1,12 @@
 ﻿using CampApp.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace CampApp.Controllers
@@ -49,12 +51,79 @@ namespace CampApp.Controllers
                 ViewBag.address = model.address;
                 ViewBag.phonenum = model.phonenum;
                 ViewBag.mail = model.mail;
+
+                try
+                {
+                    // 接続情報の作成 
+                    SqlConnectionStringBuilder builder = new SqlConnectionStringBuilder();
+                    builder.DataSource = "wizazure2021watanabetakuto.database.windows.net"; // 接続DBサーバー 
+                    builder.UserID = "azureuser"; // 管理者ID 
+                    builder.Password = "xsfE2484"; // 管理者パスワード 
+                    builder.InitialCatalog = "wizazureclasswork2021watanabetakuto"; // DB名 
+
+                    using (SqlConnection connection = new SqlConnection(builder.ConnectionString))
+
+                    {
+                        Debug.WriteLine("\nQuery data example:");
+                        Debug.WriteLine("=========================================\n");
+                        // SQL文の作成 
+                        StringBuilder sb = new StringBuilder();
+
+                        //sb.Append("SELECT * ");
+                        //sb.Append("FROM UserTable");
+                        //String sql = sb.ToString();
+
+                        string UserID = model.ID;
+                        string Name = model.name;
+                        string Furigana = model.furigana;
+                        string Birthday = model.birthday;
+                        string Password = model.rePassword;
+                        string PosCode = model.addressNum;
+                        string Address = model.address;
+                        string PhoneNumber = model.phonenum;
+                        string Mail = model.mail;
+                        string Gender = model.gender;
+
+                        string sql = "INSERT INTO UserTable VALUES("
+                            + "'" + UserID + "',"
+                            + "N'" + Name + "',"
+                            + "N'" + Furigana + "',"
+                            + "'" + Birthday + "',"
+                            + "'" + Password + "',"
+                            + "'" + PosCode + "',"
+                            + "N'" + Address + "',"
+                            + "'" + PhoneNumber + "',"
+                            + "N'" + Mail + "',"
+                            + "N'" + Gender + "'"
+                            +
+                            ")";
+
+                        using (SqlCommand command = new SqlCommand(sql, connection))
+                        {
+                            // 接続処理 
+                            connection.Open();
+
+                            using (SqlDataReader reader = command.ExecuteReader())
+                            {
+                                while (reader.Read())
+                                {
+                                    // データ表示 
+                                    Debug.WriteLine(reader["Name"]); // 表示列名の指定やり方 
+                                }
+                            }
+                        }
+                    }
+                }
+                catch (SqlException e)
+                {
+                    Debug.WriteLine(e.ToString());
+                }
             }
             else
             {
                 ViewBag.name = "No Name";
             }
-            return View(model);
+            return View();
         }
 
         [HttpPost]
