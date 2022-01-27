@@ -6,19 +6,6 @@
 
 <head>
     <style>
-        div {
-            display: flex;
-            justify-content: center;
-        }
-
-        /*#div {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            -webkit-transform: translate(-50%,-50%);
-            transform: translate(-50%,-50%);
-        }*/
-
         td {
             text-align: center;
         }
@@ -55,7 +42,7 @@
 
     <br />
 
-    <div>
+    <div style="display:flex; justify-content:center">
         <table border="1">
             <tr><th>お名前</th><td>@ViewBag.name</td></tr>
             <tr><th>フリガナ</th><td>@ViewBag.furigana</td></tr>
@@ -69,14 +56,15 @@
             <tr><th>メールアドレス</th><td>@ViewBag.mail</td></tr>
         </table>
     </div>
-    <br>
 
-    <div>
+    <br />
+
+    <div style="display:flex; justify-content:center">
         @using (Html.BeginForm("SubscFinish", "Home"))
         {
             @Html.AntiForgeryToken();
             <p>この内容でよろしければ「登録する」ボタンを押してください。</p>
-            <div><input type="submit" name="send" value="登録する"></div>
+            <div style="display:flex; justify-content:center"><input type="submit" name="send" value="登録する"></div>
         }
     </div>
 
